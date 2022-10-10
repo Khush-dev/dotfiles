@@ -1,6 +1,6 @@
 #! /bin/bash
 
-sudo apt-get install git terminator zsh vim zathura 
+sudo apt-get install git curl wget terminator zsh vim zathura 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 cp .zshrc ~/.zshrc
@@ -35,7 +35,7 @@ cd ~/.vim/bundle/YouCompleteMe
 python3 install.py --all
 cd -
 
-## advcpmv
-curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
-sudo mv ./advcpmv/advcp /usr/local/bin/cpg
-sudo mv ./advcpmv/advmv /usr/local/bin/mvg
+# ## advcpmv
+# curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
+# sudo mv ./advcpmv/advcp /usr/local/bin/cpg
+# sudo mv ./advcpmv/advmv /usr/local/bin/mvg
