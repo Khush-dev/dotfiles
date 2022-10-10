@@ -1,6 +1,7 @@
 #! /bin/bash
 
-sudo apt-get install git curl wget terminator zsh vim zathura 
+sudo apt-get update
+sudo apt-get install git curl wget terminator zsh vim zathura mpv
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 cp .zshrc ~/.zshrc
@@ -28,7 +29,7 @@ cp terminator_config ~/.config/terminator/config
 
 ## Vim
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ets-labs/python-vimrc/master/setup.sh)"
-sudo apt install build-essential cmake vim-nox python3-dev
+sudo apt install build-essential cmake vim-nox python3-dev exuberant-ctags
 sudo apt install mono-complete golang nodejs openjdk-17-jdk openjdk-17-jre npm
 cp vimrc ~/.vim/vimrc
 cd ~/.vim/bundle/YouCompleteMe
