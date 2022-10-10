@@ -9,7 +9,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/khush/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,10 +107,6 @@ fi
 # Example aliases
 alias zshrc="vim ~/.zshrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
-
-#export GHCR_PAT=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
-export DAMP_PAT=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
-
 
 # export EDITOR='vim'
 export GEM_HOME="$HOME/gems"
@@ -211,9 +207,9 @@ docker exec -it $1 /bin/bash
 #just for ref, use 'tree' or 'tree -d' instead
 alias file-tree="find | sed 's|[^/]*/|- |g'"
 alias dir-tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/| - \1/"'
-alias tt="ttyper"
+# alias tt="ttyper"
 alias vimrc="vim ${HOME}/.vimrc" 
-alias vim='/usr/bin/vim --servername vimd'
+# alias vim='/usr/bin/vim --servername vimd'
 
 alias .-ros2rolling="source ~/ros2_galactic/install/setup.zsh"
 alias .-ros="source /opt/ros/noetic/setup.zsh"
@@ -223,21 +219,10 @@ alias .-dev_ws="source ~/dev_ws/install/local_setup.zsh"
 alias r-echo="rostopic echo"
 
 alias get="sudo apt install"
-alias bt="sudo bt"
 # alias bt="sudo service bluetooth restart"
 alias pw="systemctl --user daemon-reload; systemctl --user --now enable pulseaudio.service pulseaudio.socket; systemctl --user --now disable pulseaudio.service pulseaudio.socket; systemctl --user --now enable pipewire pipewire-pulse"
-#systemctl --user --now enable pulseaudio.service pulseaudio.socket;
 
 alias goodbye="sudo shutdown now"
 
-alias mycroft="~/mycroft-core/start-mycroft.sh all"
-alias mycroft-d="~/mycroft-core/start-mycroft.sh debug"
-alias mycroft-g="~/mycroft-core/start-mycroft.sh all; mycroft-gui-app;"
-alias byecroft="~/mycroft-core/stop-mycroft.sh"
-
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-#cbonsai -m "$(fortune)" -p
