@@ -1,0 +1,8 @@
+#!/bin/bash
+
+gsettings set org.gnome.desktop.interface gtk-theme 'Orchis-purple-dark-compact'
+gsettings set org.gnome.shell.extensions.user-theme name 'Orchis-purple-dark-compact'
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme 'TCE inBlack Octo - Extend'
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/side_dock/ theme 'TCE inBlack Octo - Extend'
+gsettings set org.gnome.desktop.interface icon-theme 'kora'
+gsettings set org.gnome.desktop.background picture-uri /usr/share/backgrounds/brad-huchteman-stone-mountain.jpg

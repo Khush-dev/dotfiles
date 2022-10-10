@@ -1,0 +1,8 @@
+#!/bin/bash
+
+gsettings set org.gnome.desktop.interface gtk-theme 'WhiteSur-Dark-solid'
+gsettings set org.gnome.shell.extensions.user-theme name 'WhiteSur-Dark-solid'
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/dock1/ theme 'mcOS-BS-iMacM1-Black'
+gsettings set net.launchpad.plank.dock.settings:/net/launchpad/plank/docks/side_dock/ theme 'mcOS-BS-iMacM1-Black'
+gsettings set org.gnome.desktop.interface icon-theme 'WhiteSur-dark'
+gsettings set org.gnome.desktop.background picture-uri /home/khush/Pictures/Wallpapers/macos-catalina-mountains-island-night.jpg
