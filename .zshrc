@@ -159,7 +159,10 @@ lg()
 export NNN_PLUG='n:nmount;f:finder;o:fzopen;c:fzcd;l:launch;p:preview-tabbed;t:preview-tui;d:dragdrop;v:imgview;x:togglex;e:-!sudo -E vim $nnn*;g:-!git diff;h:-!htop;i:!convert $nnn png:- | xclip -sel clipboard -t image/png*;j:autojump;s:gsconnect;r:pdfread;k:pskill;b:boom;m:mocq;y:moclyrics'
 export NNN_FIFO=/tmp/nnn.fifo
 # export NNN_COPIER=/usr/bin/copy
-export NNN_BMS="d:$HOME/Downloads/;m:$HOME/MRT/;c:$HOME/Courses/;t:$HOME/Downloads/Telegram Desktop/;"
+
+export NNN_BMS="a:$HOME/MRT/Autonomous_Subdivision;d:$HOME/Downloads/;m:$HOME/MRT/;c:$HOME/Courses/;t:$HOME/Downloads/Telegram Desktop/;"
+
+export PYTHONSTARTUP=~/.pythonrc
 
 find-pdf(){
 find ${2:-.} -iname '*.pdf' -exec pdfgrep "$1" {} + | grep -shoP '.*?\.pdf' | sed "s/^/'/;s/$/'/"| xargs zathura
@@ -204,6 +207,10 @@ docker-bash(){
 docker exec -it $1 /bin/bash
 }
 
+master(){                                                                        
+export ROS_MASTER_URI="http://$1:11311/"
+}
+
 #just for ref, use 'tree' or 'tree -d' instead
 alias file-tree="find | sed 's|[^/]*/|- |g'"
 alias dir-tree='find . -type d | sed -e "s/[^-][^\/]*\//  |/g" -e "s/|\([^ ]\)/| - \1/"'
@@ -219,6 +226,15 @@ alias .-dev_ws="source ~/dev_ws/install/local_setup.zsh"
 alias r-echo="rostopic echo"
 
 alias get="sudo apt install"
+alias ar="sudo apt autoremove"
+alias hist="mv ~/.zsh_history ~/.zsh_history_bad;
+strings -eS ~/.zsh_history_bad > ~/.zsh_history;
+fc -r ~/.zsh_history;
+rm ~/.zsh_history_bad;"
+
+alias refresh="sudo service network-manager restart; /bin/systemctl restart systemd-hostnamed; pkill -HUP dnsmasq;"
+alias hosts="sudo vim /etc/hosts"   
+
 # alias bt="sudo service bluetooth restart"
 alias pw="systemctl --user daemon-reload; systemctl --user --now enable pulseaudio.service pulseaudio.socket; systemctl --user --now disable pulseaudio.service pulseaudio.socket; systemctl --user --now enable pipewire pipewire-pulse"
 
