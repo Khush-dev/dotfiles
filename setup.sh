@@ -37,6 +37,7 @@ rm JetBrainsMono.zip
 rm RobotoMono.zip
 
 cp terminator_config $HOME/.config/terminator/config
+cp ns $HOME/ns
 
 ## Vim
 echo "Setting up Vim"
